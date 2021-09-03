@@ -4,6 +4,9 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
+var package1
+var package2
+var package3	
 
 function preload()
 {
@@ -14,7 +17,8 @@ function preload()
 function setup() {
 	createCanvas(800, 700);
 	rectMode(CENTER);
-	
+
+	package1=createSprite()
 
 	packageSprite=createSprite(width/2, 80, 10,10);
 	packageSprite.addImage(packageIMG)
@@ -35,7 +39,7 @@ function setup() {
 	World.add(world, packageBody);
 	
 
-	//Create a Ground
+	
 
 
 
@@ -60,7 +64,6 @@ function keyPressed() {
 	ground = Bodies.rectangle(width/2, 655, width, 10 , {isStatic:true} );
  	World.add(world, ground);
 	
-    // Look at the hints in the document and understand how to make the package body fall only on press of the Down arrow key.
 
     
   }
